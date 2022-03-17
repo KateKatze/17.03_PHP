@@ -1,7 +1,7 @@
 <?php 
 require_once 'actions/db_connect.php';
 
-$sql = "SELECT * FROM products";
+$sql = "SELECT * FROM dishes";
 $result = mysqli_query($connect ,$sql);
 $tbody=''; //this variable will hold the body for the table
 if(mysqli_num_rows($result)  > 0) {     
@@ -50,13 +50,13 @@ mysqli_close($connect);
             <div class='mb-3'>
                 <a href= "create.php"><button class='btn btn-primary'type="button" >Add product</button></a>
             </div>
-            <p class='h2'>Products</p>
-            <table class='table table-striped'>
-                <thead class='table-success'>
+            <p class='h2'>Menu</p>
+            <table class='table table-border'>
+                <thead class='table-secondary'>
                     <tr>
                         <th>Picture</th>
                         <th>Name</th>
-                        <th>price</th>
+                        <th>Price</th>
                         <th>Action</th>
                     </tr>
                 </thead>

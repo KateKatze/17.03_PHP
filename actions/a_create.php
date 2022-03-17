@@ -9,7 +9,7 @@ if ($_POST) {
     //this function exists in the service file upload.
     $picture = file_upload($_FILES['picture']);  
    
-    $sql = "INSERT INTO products (name, price, picture) VALUES ('$name', $price,'$picture->fileName')";
+    $sql = "INSERT INTO dishes (name, price, picture) VALUES ('$name', $price,'$picture->fileName')";
 
     if (mysqli_query($connect, $sql) === true) {
         $class = "success";
